@@ -127,7 +127,7 @@ then
 fi
 
 # Allow overriding parameters via env variables: export PX4_PARAM_{name}={value}
-env | while IFS='=' read -r line; do
+env | while IFS= read -r line; do
   value=${line#*=}
   name=${line%%=*}
   case $name in
